@@ -1,0 +1,127 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.header img {
+	height: 50px;
+	margin-right: 10px;
+}
+
+.header h1 {
+	font-size: 32px;
+	margin: 0;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+label {
+	width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid;
+}
+
+input:focus,
+textarea:focus { 
+	outline: none;
+	border-color: #0066cc;
+}
+
+button[type="submit"] {
+	background-color: #0066cc;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #004d99;
+}
+
+button[type="submit"]:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+button[type="submit"]:disabled:hover {
+	background-color: #0066cc;
+}
+
+#download-btn {
+	background-color: #0066cc;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+#download-btn:hover {
+	background-color: #004d99;
+}
+
+#download-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+#download-btn:disabled:hover {
+	background-color: #0066cc;
+}
+
+.cv-container {
+	margin-top: 50px;
+	border: 1px solid #ddd;
+	padding: 20px;
+}
+
+.cv-container h2,
+.cv-container h3 {
+	margin-top: 0;
+}
+
+.cv-container p {
+	margin: 0;
+	line-height: 1.5;
+}
+
+@media screen and (min-width: 600px) {
+	form {
+		width: 50%;
+		margin-right: 20px;
+	}
+
+	.cv-container {
+		width: 50%;
+	}
+}
