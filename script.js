@@ -1,51 +1,50 @@
 const form = document.querySelector('form');
-const fullName = document.getElementById('full-name');
-const email = document.getElementById('email');
-const phone = document.getElementById('phone');
-const address = document.getElementById('address');
-const degree = document.getElementById('degree');
-const university = document.getElementById('university');
-const graduationYear = document.getElementById('graduation-year');
-const position = document.getElementById('position');
-const company = document.getElementById('company');
-const employmentPeriod = document.getElementById('employment-period');
-const description = document.getElementById('description');
+const cvContainer = document.querySelector('.cv-container');
+const downloadBtn = document.querySelector('#download-btn');
 
-form.addEventListener('submit', generateCV);
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const phoneInput = document.querySelector('#phone');
+const addressInput = document.querySelector('#address');
+const objectiveInput = document.querySelector('#objective');
+const educationInput = document.querySelector('#education');
+const experienceInput = document.querySelector('#experience');
 
-function generateCV(event) {
-  event.preventDefault();
+const cvName = document.querySelector('#cv-name');
+const cvEmail = document.querySelector('#cv-email');
+const cvPhone = document.querySelector('#cv-phone');
+const cvAddress = document.querySelector('#cv-address');
+const cvObjective = document.querySelector('#cv-objective');
+const cvEducation = document.querySelector('#cv-education');
+const cvExperience = document.querySelector('#cv-experience');
 
-  const fullNameValue = fullName.value;
-  const emailValue = email.value;
-  const phoneValue = phone.value;
-  const addressValue = address.value;
-  const degreeValue = degree.value;
-  const universityValue = university.value;
-  const graduationYearValue = graduationYear.value;
-  const positionValue = position.value;
-  const companyValue = company.value;
-  const employmentPeriodValue = employmentPeriod.value;
-  const descriptionValue = description.value;
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
 
-  const cvTemplate = `
-    <h1>${fullNameValue}</h1>
-    <p>${emailValue} | ${phoneValue} | ${addressValue}</p>
+	cvName.textContent = nameInput.value;
+	cvEmail.textContent = emailInput.value;
+	cvPhone.textContent = phoneInput.value;
+	cvAddress.textContent = addressInput.value;
+	cvObjective.textContent = objectiveInput.value;
+	cvEducation.textContent = educationInput.value;
+	cvExperience.textContent = experienceInput.value;
 
-    <h2>Education</h2>
-    <h3>${degreeValue}</h3>
-    <p>${universityValue} | Graduated ${graduationYearValue}</p>
+	cvContainer.style.display = 'block';
+	downloadBtn.disabled = false;
 
-    <h2>Experience</h2>
-    <h3>${positionValue}</h3>
-    <p>${companyValue} | ${employmentPeriodValue}</p>
-    <ul>
-      <li>${descriptionValue}</li>
-    </ul>
-  `;
+	form.reset();
+});
 
-  const cvWindow = window.open('', 'CV');
-  cvWindow.document.write(`<html><head><title>${fullNameValue} - CV</title></head><body>${cvTemplate}</body></html>`);
-  cvWindow.print();
-  cvWindow.close();
-}
+downloadBtn.addEventListener('click', () => {
+	html2canvas(cvContainer).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+		const pdf = new pdfMake.createPdf({
+			content: [{
+				image: imgData,
+				width: 500
+			}]
+		});
+		pdf.download("cv.pdf");
+	});
+});
+
