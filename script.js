@@ -6,28 +6,91 @@ const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const phoneInput = document.querySelector('#phone');
 const addressInput = document.querySelector('#address');
-const objectiveInput = document.querySelector('#objective');
-const educationInput = document.querySelector('#education');
-const experienceInput = document.querySelector('#experience');
+const dobInput = document.querySelector('#dob');
+const nationalityInput = document.querySelector('#nationality');
+const level1Input = document.querySelector('#academic-level-1');
+const institution1Input = document.querySelector('#institution-1');
+const from1Input = document.querySelector('#from-date-1');
+const to1Input = document.querySelector('#to-date-1');
+const level2Input = document.querySelector('#academic-level-2');
+const institution2Input = document.querySelector('#institution-2');
+const from2Input = document.querySelector('#from-date-2');
+const to2Input = document.querySelector('#to-date-2');
+const company1Input = document.querySelector('#company-1');
+const jobTitle1Input = document.querySelector('#job-title-1');
+const dateDuration1Input = document.querySelector('#from-to-date-1');
+const jobResponsibility1Textarea = document.querySelector('#job-responsibility-1');
+const company2Input = document.querySelector('#company-1');
+const jobTitle2Input = document.querySelector('#job-title-1');
+const dateDuration2Input = document.querySelector('#from-to-date-1');
+const jobResponsibility2Textarea = document.querySelector('#job-responsibility-1');
+const referenceInput = document.querySelector('#ref-name-1');
+const placeInput = document.querySelector('#ref-place-1');
+const postInput = document.querySelector('#ref-post-1');
+const remailInput = document.querySelector('#ref-email-1');
+
+
+
 
 const cvName = document.querySelector('#cv-name');
 const cvEmail = document.querySelector('#cv-email');
 const cvPhone = document.querySelector('#cv-phone');
 const cvAddress = document.querySelector('#cv-address');
-const cvObjective = document.querySelector('#cv-objective');
-const cvEducation = document.querySelector('#cv-education');
-const cvExperience = document.querySelector('#cv-experience');
+const cvDob = document.querySelector('#cv-dob');
+const cvNationality = document.querySelector('#cv-nationality');
+const cvLevel1 = document.querySelector('#cv-academic-level-1');
+const cvInstitution1 = document.querySelector('#cv-institution-1');
+const cvFrom1 = document.querySelector('#cv-from-date-1');
+const cvTo1 = document.querySelector('#cv-to-date-1');
+const cvLevel12 = document.querySelector('#cv-academic-level-2');
+const cvInstitution2 = document.querySelector('#cv-institution-2');
+const cvFrom2 = document.querySelector('#cv-from-date-2');
+const cvTo2 = document.querySelector('#cv-to-date-2');
+const cvCompany1 = document.querySelector('#cv-company-1');
+const cvJtitle1 = document.querySelector('#cv-job-title-1');
+const cvDuration1 = document.querySelector('#cv-from-to-date-1');
+const cvJresponsibility1 = document.querySelector('#cv-job-responsibility-1');
+const cvCompany2 = document.querySelector('#cv-company-2');
+const cvJtitle2 = document.querySelector('#cv-job-title-2');
+const cvDuration2 = document.querySelector('#cv-from-to-date-2');
+const cvJresponsibility2 = document.querySelector('#cv-job-responsibility-2');
+const cvreference = document.querySelector('#cv-ref-name-1');
+const cvRplace = document.querySelector('#cv-ref-place-1');
+const cvRpost = document.querySelector('#cv-ref-post-1');
+const cvRemail = document.querySelector('#cv-ref-email-1');
+
+            
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
 
+	   
 	cvName.textContent = nameInput.value;
 	cvEmail.textContent = emailInput.value;
 	cvPhone.textContent = phoneInput.value;
 	cvAddress.textContent = addressInput.value;
-	cvObjective.textContent = objectiveInput.value;
-	cvEducation.textContent = educationInput.value;
-	cvExperience.textContent = experienceInput.value;
+	cvDob.textContent = dobInput.value; 
+	cvNationality.textContent = nationalityInput.value; 
+	cvLevel1.textContent = level1Input.value;
+	cvInstitution1.textContent = institution1Input.value;
+	cvFrom1.textContent = from1Input.value; 
+	cvTo1.textContent = to1Input.value; 
+	cvLevel12.textContent = level2Input.value; 
+	cvInstitution2.textContent = institution2Input.value; 
+	cvFrom2.textContent = from2Input.value; 
+	cvTo2.textContent = to2Input.value; 
+	cvCompany1.textContent = company1Input.value; 
+	cvJtitle1.textContent = jobTitle1Input.value; 
+	cvDuration1.textContent = dateDuration1Input.value; 
+	cvJresponsibility1.textContent = jobResponsibility1Textarea.value; 
+	cvCompany2.textContent = company2Input.value; 
+	cvJtitle2.textContent = jobTitle2Input.value; 
+	cvDuration2.textContent = dateDuration2Input.value; 
+	cvJresponsibility2.textContent = jobResponsibility2Textarea.value; 
+	cvreference.textContent = referenceInput.value; 
+	cvRplace.textContent = placeInput.value; 
+	cvRpost.textContent = postInput.value; 
+	cvRemail.textContent = remailInput.value; 
 
 	cvContainer.style.display = 'block';
 	downloadBtn.disabled = false;
