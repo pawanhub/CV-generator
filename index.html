@@ -4,58 +4,237 @@
 	<title>CV Generator</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<header>
+	<div class="header">
+		<img src="https://bizzeducation.com//storage/pages/October2018/xL6Sbd3ADYXuUlkwtrrN.png" alt="Logo">	
+	</div>
+	<h1>CV Generator</h1>
+	
+</header>
 <body>
-	<div class="wrapper">
-		<div class="header">
-			<img src="https://bizzeducation.com//storage/pages/October2018/xL6Sbd3ADYXuUlkwtrrN.png" alt="Logo">
-			<br>&nbsp;
-            <h2>CV Generator</h2>
-            
-            
-		</div>
-        <h2>Personal Details</h2>
+	
+	<div class="wrapper"> 
 		<form>
+			<h2>Personal Details</h2>
 			<label for="name">Full Name:</label>
-			<input type="text" id="name" name="name">
+			<input type="text" id="name" name="name" required>
 
 			<label for="email">Email Address:</label>
-			<input type="email" id="email" name="email">
+			<input type="email" id="email" name="email" required>
 
 			<label for="phone">Phone Number:</label>
-			<input type="tel" id="phone" name="phone">
+			<input type="tel" id="phone" name="phone" required>
 
 			<label for="address">Home Address:</label>
-			<input type="text" id="address" name="address">
+			<input type="text" id="address" name="address" required>
 
 			<label for="dob">Date of Birth:</label>
-			<input type="date" id="dob" name="dob">
+			<input type="date" id="dob" name="dob" required>
 
 			<label for="nationality">Nationality:</label>
-			<input type="text" id="nationality" name="nationality">
+			<input type="text" id="nationality" name="nationality" required>
 
-			<label for="education">Education:</label>
-			<textarea id="education" name="education"></textarea>
+			<h2>Academic Qualification</h2>
+			<!-- First academic qualification -->
+			<h3>Recent Qualification</h3>
+			<label for="academic-level-1">Academic Level</label>
+			<input type="text" id="academic-level-1" name="academic-level-1" required>
 
-			<label for="experience">Experience:</label>
-			<textarea id="experience" name="experience"></textarea>
+			<label for="institution-1">Institution</label>
+			<input type="text" id="institution-1" name="institution-1" required>
 
+			<label for="from-date-1">From (MM/YY)</label>
+			<input type="text" id="from-date-1" name="from-date-1" placeholder="MM/YY" required>
+
+			<label for="to-date-1">To (MM/YY)</label>
+			<input type="text" id="to-date-1" name="to-date-1" placeholder="MM/YY" required>
+			
+			<!-- Second academic qualification -->
+			<h3>Previous Qualification</h3>
+			<label for="academic-level-1">Academic Level</label>
+			<input type="text" id="academic-level-2" name="academic-level-1">
+
+			<label for="institution-1">Institution</label>
+			<input type="text" id="institution-2" name="institution-1">
+
+			<label for="from-date-1">From (MM/YY)</label>
+			<input type="text" id="from-date-2" name="from-date-1" placeholder="MM/YY">
+
+			<label for="to-date-1">To (MM/YY)</label>
+			<input type="text" id="to-date-2" name="to-date-1" placeholder="MM/YY">
+
+			<h2>Experience</h2>
+			<!-- First work experience -->
+
+			<h3>Recent Experience</h3>
+			<label for="company-1">Company</label>
+			<input type="text" id="company-1" name="company-1" required>
+			
+			<label for="job-title-1">Job Title</label>
+			<input type="text" id="job-title-1" name="job-title-1" required>
+			
+			<label for="from-to-date-1">From-To (MM/YY)</label>
+			<input type="text" id="from-to-date-1" name="from-to-date-1" placeholder="MM/YY - MM/YY" required>
+			
+			<label for="job-responsibility-1">Job Responsibility</label>
+			<textarea id="job-responsibility-1" name="job-responsibility-1" required></textarea>
+
+				
+			<!-- Second work experience -->
+			<h3>Previous Experience</h3>
+
+			<label for="company-1">Company</label>
+			<input type="text" id="company-2" name="company-1">
+			
+			<label for="job-title-1">Job Title</label>
+			<input type="text" id="job-title-2" name="job-title-1">
+			
+			<label for="from-to-date-1">From-To (MM/YY)</label>
+			<input type="text" id="from-to-date-2" name="from-to-date-1" placeholder="MM/YY - MM/YY">
+			
+			<label for="job-responsibility-1">Job Responsibility</label>
+			<textarea id="job-responsibility-2" name="job-responsibility-1"></textarea>
+			
+			<!-- References here -->
+			<h2>References</h2>
+
+			<label for="ref-name-1">Name</label>
+			<input type="text" id="ref-name-1" name="ref-name-1" required>
+
+			<label for="ref-place-1">Place</label>
+			<input type="text" id="ref-place-1" name="ref-place-1" required>
+
+			<label for="ref-post-1">Post</label>
+			<input type="text" id="ref-post-1" name="ref-post-1" required>
+			
+			<label for="ref-email-1">Email or Contact</label>
+			<input type="text" id="ref-email-1" name="ref-email-1" required>
+			  
 			<button type="submit">Generate CV</button>
 			<button type="button" id="download-btn">Download PDF</button>
 		</form>
 
+
+		<!-- Display CV -->
 		<div class="cv-container" id="cv-container">
-			<h2 id="cv-name"></h2>
-			<p id="cv-email"></p>
-			<p id="cv-phone"></p>
-			<p id="cv-address"></p>
-			<p id="cv-dob"></p>
-			<p id="cv-nationality"></p>
-
-			<h3>Education:</h3>
-			<p id="cv-education"></p>
-
-			<h3>Experience:</h3>
-			<p id="cv-experience"></p>
+			<h1 class="cv-heading" style="text-align: center; font-weight: bold; text-decoration: underline;">Curriculum Vitae</h1>
+		
+			<div class="cv-item">
+				<h2 class="cv-subheading">Personal Details</h2>
+		
+				<div class="cv-details">
+					<div class="cv-detail">
+						<h3 class="cv-detail-heading">Name:</h3><p class="cv-detail-content" id="cv-name"></p>
+					</div>
+		
+					<div class="cv-detail">
+						<h3 class="cv-detail-heading">Email:</h3><p class="cv-detail-content" id="cv-email"></p>
+					</div>
+		
+					<div class="cv-detail">
+						<h3 class="cv-detail-heading">Contact Number:</h3><p class="cv-detail-content" id="cv-phone"></p>
+					</div>
+		
+					<div class="cv-detail">
+						<h3 class="cv-detail-heading">Permanent Address:</h3><p class="cv-detail-content" id="cv-address"></p>
+					</div>
+		
+					<div class="cv-detail">
+						<h3 class="cv-detail-heading">Date of Birth:</h3><p class="cv-detail-content" id="cv-dob"></p>
+					</div>
+		
+					<div class="cv-detail">
+						<h3 class="cv-detail-heading">Nationality:</h3><p class="cv-detail-content" id="cv-nationality"></p>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Academic Qualification section -->
+			<div class="cv-item">
+				<h2 class="cv-subheading">Academic Qualification</h2>
+		
+				<table class="cv-table">
+					<thead>
+						<tr>
+							<th>Academic Level</th>
+							<th>Institution</th>
+							<th>From (MM/YY)</th>
+							<th>To (MM/YY)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><p id="cv-academic-level-1"></p></td>
+							<td><p id="cv-institution-1"></p></td>
+							<td><p id="cv-from-date-1"></p></td>
+							<td><p id="cv-to-date-1"></p></td>
+						</tr>
+						<tr>
+							<td><p id="cv-academic-level-2"></p></td>
+							<td><p id="cv-institution-2"></p></td>
+							<td><p id="cv-from-date-2"></p></td>
+							<td><p id="cv-to-date-2"></p></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+			<!-- Experience section -->
+			<div class="cv-item">
+				<h2 class="cv-subheading">Experience</h2>
+			
+				<div class="table-container">
+					<table class="cv-table">
+						<thead>
+							<tr>
+								<th>Company</th>
+								<th>Job Title</th>
+								<th>From-To (MM/YY)</th>
+								<th>Job Responsibility</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><p id="cv-company-1"></p></td>
+								<td><p id="cv-job-title-1"></p></td>
+								<td><p id="cv-from-to-date-1"></p></td>
+								<td><p id="cv-job-responsibility-1"></p></td>
+							</tr>
+							<tr>
+								<td><p id="cv-company-2"></p></td>
+								<td><p id="cv-job-title-2"></p></td>
+								<td><p id="cv-from-to-date-2"></p></td>
+								<td><p id="cv-job-responsibility-2"></p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- Reference section -->
+			<div class="cv-item">
+				<h2 class="cv-subheading">References</h2>
+			
+				<div class="table-container">
+					<table class="cv-table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Place</th>
+								<th>Post</th>
+								<th>Email or Contact</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><p id="cv-ref-name-1"></p></td>
+								<td><p id="cv-ref-place-1"></p></td>
+								<td><p id="cv-ref-post-1"></p></td>
+								<td><p id="cv-ref-email-1"></p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>	
 		</div>
 	</div>
 
