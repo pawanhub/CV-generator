@@ -8,14 +8,14 @@
 	<div class="header">
 		<img src="https://bizzeducation.com//storage/pages/October2018/xL6Sbd3ADYXuUlkwtrrN.png" alt="Logo">	
 	</div>
-	<h1>CV Generator</h1>
-	
 </header>
 <body>
-	
+	<div class="main_title">
+		<h1>CV GENERATOR</h1>
+	</div>
 	<div class="wrapper"> 
 		<form>
-			<h2>Personal Details</h2>
+			<h2>Personal Details</h2><i class="fa-solid fa-user"></i>
 			<label for="name">Full Name:</label>
 			<input type="text" id="name" name="name" required>
 
@@ -34,66 +34,79 @@
 			<label for="nationality">Nationality:</label>
 			<input type="text" id="nationality" name="nationality" required>
 
+			<!-- Container academic qualification -->
 			<h2>Academic Qualification</h2>
 			<!-- First academic qualification -->
-			<h3>Recent Qualification</h3>
-			<label for="academic-level-1">Academic Level</label>
-			<input type="text" id="academic-level-1" name="academic-level-1" required>
-
-			<label for="institution-1">Institution</label>
-			<input type="text" id="institution-1" name="institution-1" required>
-
-			<label for="from-date-1">From (MM/YY)</label>
-			<input type="text" id="from-date-1" name="from-date-1" placeholder="MM/YY" required>
-
-			<label for="to-date-1">To (MM/YY)</label>
-			<input type="text" id="to-date-1" name="to-date-1" placeholder="MM/YY" required>
-			
-			<!-- Second academic qualification -->
-			<h3>Previous Qualification</h3>
-			<label for="academic-level-1">Academic Level</label>
-			<input type="text" id="academic-level-2" name="academic-level-1">
-
-			<label for="institution-1">Institution</label>
-			<input type="text" id="institution-2" name="institution-1">
-
-			<label for="from-date-1">From (MM/YY)</label>
-			<input type="text" id="from-date-2" name="from-date-1" placeholder="MM/YY">
-
-			<label for="to-date-1">To (MM/YY)</label>
-			<input type="text" id="to-date-2" name="to-date-1" placeholder="MM/YY">
-
-			<h2>Experience</h2>
-			<!-- First work experience -->
-
-			<h3>Recent Experience</h3>
-			<label for="company-1">Company</label>
-			<input type="text" id="company-1" name="company-1" required>
-			
-			<label for="job-title-1">Job Title</label>
-			<input type="text" id="job-title-1" name="job-title-1" required>
-			
-			<label for="from-to-date-1">From-To (MM/YY)</label>
-			<input type="text" id="from-to-date-1" name="from-to-date-1" placeholder="MM/YY - MM/YY" required>
-			
-			<label for="job-responsibility-1">Job Responsibility</label>
-			<textarea id="job-responsibility-1" name="job-responsibility-1" required></textarea>
-
+			<div id="qualification_box">
 				
-			<!-- Second work experience -->
-			<h3>Previous Experience</h3>
+				<h3>Recent Qualification</h3>
+				<label for="academic-level-1">Academic Level</label>
+				<input type="text" id="academic-level-1" name="academic-level-1" required>
 
-			<label for="company-1">Company</label>
-			<input type="text" id="company-2" name="company-1">
+				<label for="institution-1">Institution</label>
+				<input type="text" id="institution-1" name="institution-1" required>
+
+				<label for="from-date-1">From (MM/YY)</label>
+				<input type="text" id="from-date-1" name="from-date-1" placeholder="MM/YY" required>
+
+				<label for="to-date-1">To (MM/YY)</label>
+				<input type="text" id="to-date-1" name="to-date-1" placeholder="MM/YY" required>
+
+			</div>	
+			<div id="qualification_box2" style="display: none;">
+				
+				<h3>Previous Qualification</h3>
+				<label for="academic-level-2">Academic Level</label>
+				<input type="text" id="academic-level-2" name="academic-level-2">
+
+				<label for="institution-2">Institution</label>
+				<input type="text" id="institution-2" name="institution-2">
+
+				<label for="from-date-2">From (MM/YY)</label>
+				<input type="text" id="from-date-2" name="from-date-2" placeholder="MM/YY">
+
+				<label for="to-date-1">To (MM/YY)</label>
+				<input type="text" id="to-date-2" name="to-date-2" placeholder="MM/YY">
+
+			</div>	
+			<button class="add_btn" id="add_qualification" type="button">Add Qualification</button>
+
+			<!-- Container Experience -->
+			<h2>Experience</h2>
+			<div id="experience_box">
+				
+				<!-- First work experience -->
+				<h3>Recent Experience</h3>
+				<label for="company-1">Company</label>
+				<input type="text" id="company-1" name="company-1" required>
+				
+				<label for="job-title-1">Job Title</label>
+				<input type="text" id="job-title-1" name="job-title-1" required>
+				
+				<label for="from-to-date-1">From-To (MM/YY)</label>
+				<input type="text" id="from-to-date-1" name="from-to-date-1" placeholder="MM/YY - MM/YY" required>
+				
+				<label for="job-responsibility-1">Job Responsibility</label>
+				<textarea id="job-responsibility-1" name="job-responsibility-1" required></textarea>
+			</div>
+			<!-- Second work experience -->
+			<div id="experience_box2" style="display: none;">
+
+				<h3>Previous Experience</h3>
+				<label for="company-2">Company</label>
+				<input type="text" id="company-2" name="company-2">
+				
+				<label for="job-title-2">Job Title</label>
+				<input type="text" id="job-title-2" name="job-title-2">
+				
+				<label for="from-to-date-2">From-To (MM/YY)</label>
+				<input type="text" id="from-to-date-2" name="from-to-date-2" placeholder="MM/YY - MM/YY">
+				
+				<label for="job-responsibility-2">Job Responsibility</label>
+				<textarea id="job-responsibility-2" name="job-responsibility-2"></textarea>
+			</div>
+			<button class="add_btn" id="add_experience" type="button">Add Experience</button>
 			
-			<label for="job-title-1">Job Title</label>
-			<input type="text" id="job-title-2" name="job-title-1">
-			
-			<label for="from-to-date-1">From-To (MM/YY)</label>
-			<input type="text" id="from-to-date-2" name="from-to-date-1" placeholder="MM/YY - MM/YY">
-			
-			<label for="job-responsibility-1">Job Responsibility</label>
-			<textarea id="job-responsibility-2" name="job-responsibility-1"></textarea>
 			
 			<!-- References here -->
 			<h2>References</h2>
@@ -109,9 +122,10 @@
 			
 			<label for="ref-email-1">Email or Contact</label>
 			<input type="text" id="ref-email-1" name="ref-email-1" required>
-			  
-			<button type="submit">Generate CV</button>
-			<button type="button" id="download-btn">Download PDF</button>
+			<div id="button-container">
+				<button type="submit">Generate CV</button>
+				<button type="button" id="download-btn">Download PDF</button>
+			</div>
 		</form>
 
 
@@ -120,7 +134,7 @@
 			<h1 class="cv-heading" style="text-align: center; font-weight: bold; text-decoration: underline;">Curriculum Vitae</h1>
 		
 			<div class="cv-item">
-				<h2 class="cv-subheading">Personal Details</h2>
+				<h2 class="cv-subheading" style="text-decoration: underline;">Personal Details</h2>
 		
 				<div class="cv-details">
 					<div class="cv-detail">
@@ -151,7 +165,7 @@
 		
 			<!-- Academic Qualification section -->
 			<div class="cv-item">
-				<h2 class="cv-subheading">Academic Qualification</h2>
+				<h2 class="cv-subheading" style="text-decoration: underline;">Academic Qualification</h2>
 		
 				<table class="cv-table">
 					<thead>
@@ -181,7 +195,7 @@
 		
 			<!-- Experience section -->
 			<div class="cv-item">
-				<h2 class="cv-subheading">Experience</h2>
+				<h2 class="cv-subheading" style="text-decoration: underline;">Experience</h2>
 			
 				<div class="table-container">
 					<table class="cv-table">
@@ -212,7 +226,7 @@
 			</div>
 			<!-- Reference section -->
 			<div class="cv-item">
-				<h2 class="cv-subheading">References</h2>
+				<h2 class="cv-subheading" style="text-decoration: underline;">References</h2>
 			
 				<div class="table-container">
 					<table class="cv-table">
@@ -241,5 +255,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
 	<script src="script.js"></script>
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
 </html>
