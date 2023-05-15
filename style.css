@@ -1,27 +1,36 @@
 /* header styles */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
     background-color:aliceblue;
-    color: black;
+    text-align: center;
 }
 
 .header img {
-    width: 40%;	
+    width: 10%;	
+}
+
+.header img {
+  display: inline-block;
+}
+
+.main_title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0%;
 }
 
 /* form styles */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 700px;
 	padding: 20px;
 	background: #f4f7f8;
-	margin: 10px auto;
-	padding: 20px;
+	margin-top: 5px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+	padding: 30px;
 	background: #f4f7f8;
 	border-radius: 8px;
 	font-family: 'Open Sans Condensed', arial, sans;
@@ -29,6 +38,10 @@ form {
 
 label {
     font-weight: bold;
+
+}
+input[type="text"]{
+  padding: 5px;
 }
 
 input[type="text"],
@@ -50,7 +63,7 @@ input[type="date"]:focus {
 }
 
 textarea {
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     width: 100%;
@@ -84,6 +97,13 @@ h3 {
     font-size: 20px;
 }
 
+#button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 /* submit button */
 button[type="submit"]  {
   align-items: center;
@@ -115,6 +135,7 @@ button[type="submit"]  {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  width: 25%;
 }
 
 button[type="submit"]:hover {
@@ -138,7 +159,7 @@ button[type="submit"]:focus {
 
 
 /* submit button */
-button[type="button"]  {
+#download-btn[type="button"]  {
 	align-items: center;
 	background-color: initial;
 	background-image: linear-gradient(#5183bb, #0a356a);
@@ -168,23 +189,24 @@ button[type="button"]  {
 	user-select: none;
 	-webkit-user-select: none;
 	touch-action: manipulation;
+  width: 25%;
   }
   
-  button[type="button"]:hover {
+  #download-btn[type="button"]:hover {
 	box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
 	opacity: .85;
   }
   
-  button[type="button"]:active {
+  #download-btn[type="button"]:active {
 	outline: 0;
   }
   
-  button[type="button"]:focus {
+  #download-btn[type="button"]:focus {
 	box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
   }
   
   @media (max-width: 420px) {
-	.button[type="button"] {
+  #download-btn[type="button"] {
 	  height: 48px;
 	}
   }
@@ -195,7 +217,7 @@ button[type="button"]  {
 .wrapper {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 25px;
 }
 
 /* CV Container */
@@ -215,6 +237,7 @@ button[type="button"]  {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 2rem;
+  border: 2px solid #000;
   }
   
   @media screen and (max-width: 600px) {
@@ -240,28 +263,27 @@ button[type="button"]  {
   
   /* Personal Details */
   .cv-section {
-	margin-top: 2rem;
+	margin-top: 0.6rem;
   }
   
   .cv-section h2 {
 	font-size: 1.5rem;
 	font-weight: bold;
-	margin-bottom: 1rem;
+	margin-bottom: 0.6rem;
   }
   
   .cv-section h3 {
 	display: inline-block;
 	font-size: 1.2rem;
 	font-weight: bold;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
   }
   
   .cv-section p {
 	display: inline-block;
 	font-size: 1rem;
 	margin: 0;
-	border-bottom: 1px solid #ccc;
 	padding-bottom: 0.5rem;
   }
   
@@ -278,13 +300,13 @@ button[type="button"]  {
 	padding: 0.5rem;
 	text-align: left;
 	vertical-align: top;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc; /* add right border */
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000; /* add right border */
   }
 
   .cv-table th:first-child,
 .cv-table td:first-child {
-  border-left: 1px solid #ccc; /* add left border */
+  border-left: 2px solid #000; /* add left border */
 }
   
   .cv-table th {
@@ -371,3 +393,35 @@ button[type="button"]  {
 	  padding-bottom: 0.5rem;
 	}
   }
+ 
+/* Add Button CSS */
+.add_btn  {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 25%;
+  z-index: 9;
+  border: 0;
+}
+
+.add_btn :hover {
+  background: #00bd68;
+}
