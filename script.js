@@ -1,3 +1,36 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the div and button
+    const qualificationBox = document.getElementById("qualification_box2");
+    const addButton = document.getElementById("add_qualification");
+
+    // Add click event listener to the button
+    addButton.addEventListener("click", function() {
+      // Toggle the display style of the div
+      qualificationBox.style.display = qualificationBox.style.display === "none" ? "block" : "none";
+      
+      // Change the button text based on the div display state
+      addButton.textContent = qualificationBox.style.display === "none" ? "Add Qualification" : "Remove Qualification";
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the div and button
+    const experienceBox = document.getElementById("experience_box2");
+    const addButton = document.getElementById("add_experience");
+
+    // Add click event listener to the button
+    addButton.addEventListener("click", function() {
+      // Toggle the display style of the div
+      experienceBox.style.display = experienceBox.style.display === "none" ? "block" : "none";
+      
+      // Change the button text based on the div display state
+      addButton.textContent = experienceBox.style.display === "none" ? "Add Experience" : "Remove Experience";
+    });
+  });
+
+
+
+// store a form data into local storage
 const form = document.querySelector('form');
 const cvContainer = document.querySelector('.cv-container');
 const downloadBtn = document.querySelector('#download-btn');
