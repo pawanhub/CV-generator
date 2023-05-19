@@ -1,30 +1,50 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Get references to the div and button
-    const qualificationBox = document.getElementById("qualification_box2");
-    const addButton = document.getElementById("add_qualification");
-
-    // Add click event listener to the button
-    addButton.addEventListener("click", function() {
-      // Toggle the display style of the div
-      qualificationBox.style.display = qualificationBox.style.display === "none" ? "block" : "none";
-      
-      // Change the button text based on the div display state
-      addButton.textContent = qualificationBox.style.display === "none" ? "Add Qualification" : "Remove Qualification";
-    });
+	// Get references to the div and button
+	const qualificationBox = document.getElementById("qualification_box2");
+	const addButton = document.getElementById("add_qualification");
+	const secondEducationRow = document.getElementById("second_education");
+  
+	// Add click event listener to the button
+	addButton.addEventListener("click", function() {
+	  // Toggle the display style of the div
+	  qualificationBox.style.display = qualificationBox.style.display === "none" ? "block" : "none";
+  
+	  // Toggle the display style of the second education row
+	  secondEducationRow.style.display = secondEducationRow.style.display === "none" ? "table-row" : "none";
+	  
+	  // Change the button text based on the div display state
+	  addButton.textContent = qualificationBox.style.display === "none" ? "Add Qualification" : "Remove Qualification";
+  
+	  // Remove the second education row if education is removed
+	  if (qualificationBox.style.display === "none") {
+		secondEducationRow.remove();
+	  }
+	});
   });
+  
 
   document.addEventListener("DOMContentLoaded", function() {
     // Get references to the div and button
     const experienceBox = document.getElementById("experience_box2");
     const addButton = document.getElementById("add_experience");
+	const secondExperienceRow = document.getElementById("second_experience");
 
     // Add click event listener to the button
     addButton.addEventListener("click", function() {
       // Toggle the display style of the div
       experienceBox.style.display = experienceBox.style.display === "none" ? "block" : "none";
+
+		// Toggle the display style of the second experience row
+		secondExperienceRow.style.display = secondExperienceRow.style.display === "none" ? "table-row" : "none";
       
       // Change the button text based on the div display state
       addButton.textContent = experienceBox.style.display === "none" ? "Add Experience" : "Remove Experience";
+
+	  // Remove the second experiecne row if experience is removed
+	  if (experienceBox.style.display === "none") {
+		secondExperienceRow.remove();
+	  }
+
     });
   });
 
@@ -45,10 +65,12 @@ const level1Input = document.querySelector('#academic-level-1');
 const institution1Input = document.querySelector('#institution-1');
 const from1Input = document.querySelector('#from-date-1');
 const to1Input = document.querySelector('#to-date-1');
+const grade1Input = document.querySelector('#grade-1');
 const level2Input = document.querySelector('#academic-level-2');
 const institution2Input = document.querySelector('#institution-2');
 const from2Input = document.querySelector('#from-date-2');
 const to2Input = document.querySelector('#to-date-2');
+const grade2Input = document.querySelector('#grade-2');
 const company1Input = document.querySelector('#company-1');
 const jobTitle1Input = document.querySelector('#job-title-1');
 const dateDuration1Input = document.querySelector('#from-to-date-1');
@@ -75,10 +97,12 @@ const cvLevel1 = document.querySelector('#cv-academic-level-1');
 const cvInstitution1 = document.querySelector('#cv-institution-1');
 const cvFrom1 = document.querySelector('#cv-from-date-1');
 const cvTo1 = document.querySelector('#cv-to-date-1');
+const cvGrade1 = document.querySelector('#cv-grade-1');
 const cvLevel12 = document.querySelector('#cv-academic-level-2');
 const cvInstitution2 = document.querySelector('#cv-institution-2');
 const cvFrom2 = document.querySelector('#cv-from-date-2');
 const cvTo2 = document.querySelector('#cv-to-date-2');
+const cvGrade2 = document.querySelector('#cv-grade-2');
 const cvCompany1 = document.querySelector('#cv-company-1');
 const cvJtitle1 = document.querySelector('#cv-job-title-1');
 const cvDuration1 = document.querySelector('#cv-from-to-date-1');
@@ -108,10 +132,12 @@ form.addEventListener('submit', (event) => {
 	cvInstitution1.textContent = institution1Input.value;
 	cvFrom1.textContent = from1Input.value; 
 	cvTo1.textContent = to1Input.value; 
+	cvGrade1.textContent = grade1Input.value;
 	cvLevel12.textContent = level2Input.value; 
 	cvInstitution2.textContent = institution2Input.value; 
 	cvFrom2.textContent = from2Input.value; 
 	cvTo2.textContent = to2Input.value; 
+	cvGrade2.textContent = grade2Input.value;
 	cvCompany1.textContent = company1Input.value; 
 	cvJtitle1.textContent = jobTitle1Input.value; 
 	cvDuration1.textContent = dateDuration1Input.value; 
