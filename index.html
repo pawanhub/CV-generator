@@ -52,6 +52,9 @@
 				<label for="to-date-1">To (MM/YY)</label>
 				<input type="text" id="to-date-1" name="to-date-1" placeholder="MM/YY" required>
 
+				<label for="grade-1">Grade</label>
+				<input type="text" id="grade-1" name="grade-1" required>
+
 			</div>	
 			<div id="qualification_box2" style="display: none;">
 				
@@ -67,6 +70,9 @@
 
 				<label for="to-date-1">To (MM/YY)</label>
 				<input type="text" id="to-date-2" name="to-date-2" placeholder="MM/YY">
+
+				<label for="grade-2">Grade</label>
+				<input type="text" id="grade-2" name="grade-2">
 
 			</div>	
 			<button class="add_btn" id="add_qualification" type="button">Add Qualification</button>
@@ -174,6 +180,7 @@
 							<th>Institution</th>
 							<th>From (MM/YY)</th>
 							<th>To (MM/YY)</th>
+							<th>Grade</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -182,12 +189,14 @@
 							<td><p id="cv-institution-1"></p></td>
 							<td><p id="cv-from-date-1"></p></td>
 							<td><p id="cv-to-date-1"></p></td>
+							<td><p id="cv-grade-1"></p></td>
 						</tr>
-						<tr>
+						<tr id="second_education" style="display: none;">
 							<td><p id="cv-academic-level-2"></p></td>
 							<td><p id="cv-institution-2"></p></td>
 							<td><p id="cv-from-date-2"></p></td>
 							<td><p id="cv-to-date-2"></p></td>
+							<td><p id="cv-grade-2"></p></td>
 						</tr>
 					</tbody>
 				</table>
@@ -214,7 +223,7 @@
 								<td><p id="cv-from-to-date-1"></p></td>
 								<td><p id="cv-job-responsibility-1"></p></td>
 							</tr>
-							<tr>
+							<tr id="second_experience" style="display: none;">
 								<td><p id="cv-company-2"></p></td>
 								<td><p id="cv-job-title-2"></p></td>
 								<td><p id="cv-from-to-date-2"></p></td>
