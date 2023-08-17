@@ -40,6 +40,9 @@ label {
     font-weight: bold;
 
 }
+span{
+	color:red;
+}
 input[type="text"]{
   padding: 5px;
 }
